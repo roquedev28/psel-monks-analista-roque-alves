@@ -1,38 +1,75 @@
 .App {
-  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.promo-banner {
+  background-color: #4e008e;
   color: white;
+  padding: 30px;
+  text-align: center;
+  margin: 40px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.promo-banner img {
+  height: 40px;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsividade */
+
+@media (min-width: 600px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .image-grid {
+    display: flex;
+    gap: 20px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tag {
+    padding: 8px 12px;
+    background: #e2d6ff;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  form input, form button {
+    padding: 10px;
+  }
+
+  .promo-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .promo-banner .buttons {
+    display: flex;
+    gap: 15px;
   }
 }
